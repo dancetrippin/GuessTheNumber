@@ -21,7 +21,10 @@ public class Game {
             int guessedNumber = sc.nextInt();
             attempts++;
 
-            if (guessedNumber < hiddenNumber) {
+            if (attempts >= 9) {
+                System.out.println("Game Over!");
+                break;
+            } else if (guessedNumber < hiddenNumber) {
                 System.out.println("More!");
             } else if (guessedNumber > hiddenNumber) {
                 System.out.println("Less!");
@@ -30,9 +33,10 @@ public class Game {
                 System.out.println("You used " + attempts + " attempts!");
                 break;
             }
+
         }
     }
 }
-        //attempts++, attempts+=1, attempts=attempts + 1     -> sunt identice
+//attempts++, attempts+=1, attempts=attempts + 1     -> sunt identice
 
-        //// TODO: 17/06/2024 Implementeza un sistem de vieti (8 vieti, la a 9-a Game Over + break)
+//// TODO: 17/06/2024 Implementeza un sistem de vieti (8 vieti, la a 9-a Game Over + break)
